@@ -88,6 +88,8 @@ Ajouter la clé dans le fichier .env
 Exemple :
 GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxx
 
+api_key :
+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
 
 
 Le chatbot ne trouve pas de réponse ?
