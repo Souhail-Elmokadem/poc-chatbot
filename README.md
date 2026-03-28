@@ -90,3 +90,10 @@ GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxx
 
 
 
+Le chatbot ne trouve pas de réponse ?
+
+Vérifier :
+
+que la question existe dans faq.json
+qu’il y a plusieurs formulations possibles
+que le JSON est bien formé
