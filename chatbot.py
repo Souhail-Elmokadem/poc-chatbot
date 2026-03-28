@@ -18,7 +18,7 @@ st.set_page_config(page_title="Chatbot FAQ", page_icon="💬", layout="centered"
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_MODEL = "llama-3.1-8b-instant"
 FALLBACK_ANSWER = "Désolé, je n'ai pas trouvé de réponse claire dans la FAQ."
-SIMILARITY_THRESHOLD = 0.6
+SIMILARITY_THRESHOLD = 0.45
 TOP_K = 3
 
 client = None
@@ -53,10 +53,9 @@ def normalize(text):
     text = text.lower().strip()
     text = unicodedata.normalize("NFD", text)
     text = "".join(c for c in text if unicodedata.category(c) != "Mn")
-    text = re.sub(r"[^a-z0-9 ]", " ", text)
+    text = re.sub(r"[^a-z0-9\s]", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
-
 
 def similarity(a, b):
     return SequenceMatcher(None, a, b).ratio()
