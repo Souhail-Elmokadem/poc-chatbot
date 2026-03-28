@@ -1,0 +1,14 @@
+[
+  {
+    "questions": ["bonjour", "salut", "hello"],
+    "answer": "Bonjour 👋"
+  },
+  {
+    "questions": ["horaire", "heures ouverture"],
+    "answer": "Nous sommes ouverts de 9h à 18h"
+  },
+  {
+    "questions": ["adresse", "ou vous etes"],
+    "answer": "Nous sommes à Paris"
+  }
+]
